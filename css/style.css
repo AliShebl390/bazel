@@ -13,6 +13,12 @@ body {
 
 @media (min-width:768px) {
     .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
         width: 750px
     }
 }
@@ -27,6 +33,38 @@ body {
     .container {
         width: 1170px
     }
+}
+
+/* Mean heading */
+.mean-heading {
+    position: relative;
+}
+
+.mean-heading h2 {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -1px;
+    font-weight: 700;
+    color: #1f1f1f;
+    line-height: 1.3;
+    font-size: 38px;
+}
+
+.mean-heading h2::before {
+    content: 'c';
+    position: absolute;
+    color: #ececec;
+    font-size: 60px;
+    bottom: 35%;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mean-heading p {
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #787878;
 }
 
 /* End of global */
@@ -80,7 +118,6 @@ nav button {
 
 nav .navbar-collapse {
     border-top: 1px solid #e6e6e6;
-    background-color: white;
 }
 
 @media screen and (max-width: 992px) {
@@ -216,6 +253,7 @@ nav .navbar-collapse {
 
 .about {
     padding: 110px 0;
+    border-bottom: 1px solid #eee;
 }
 
 .about .container .content h6 {
@@ -224,6 +262,7 @@ nav .navbar-collapse {
     color: #1f1f1f;
     font-weight: 500;
 }
+
 .about .container .content p {
     font-weight: 300;
     font-size: 24px;
@@ -244,7 +283,8 @@ nav .navbar-collapse {
     background-color: transparent;
     margin-top: 28px;
 }
-.about .container .content button:hover{
+
+.about .container .content button:hover {
     background-color: black;
     color: #fff;
 }
@@ -297,6 +337,7 @@ nav .navbar-collapse {
         content: "softwares";
         width: 8ch;
     }
+
     70% {
         width: 0ch;
     }
@@ -317,5 +358,54 @@ nav .navbar-collapse {
         opacity: 0;
     }
 }
+
 /* End animation */
 /* End abt */
+/* Start team */
+.team .content {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.team .layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: hidden;
+    top: 100%;
+    overflow: hidden;
+    color: white;
+    background-color: #18c9dde2;
+    transition: all 400ms ease-in-out;
+}
+.team .content:hover .layer{
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.team .layer .team-con {
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+    color: #fff;
+    margin: 0;
+    
+}
+.team .layer .team-con h6 {
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+}
+
+.team .layer .team-con p {
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* End team */
