@@ -2,6 +2,11 @@
     --main-color: #00C3DA;
 }
 
+::selection {
+    background-color: #1f1f1f;
+    color: white;
+}
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -23,9 +28,10 @@ body {
         width: 1170px
     }
 }
+
 /* End of global */
 /* Start of nav */
-nav{
+nav {
     z-index: 100;
     top: 0;
     left: 0;
@@ -53,6 +59,7 @@ nav .navbar-nav .nav-link:hover,
 nav .navbar-nav .nav-link.active {
     color: #787878;
 }
+
 nav li,
 nav .navbar-nav .nav-link {
     color: black;
@@ -62,7 +69,7 @@ nav .navbar-nav .nav-link {
     font-weight: 500;
 }
 
-.navbar-brand{
+.navbar-brand {
     position: relative;
 }
 
@@ -77,20 +84,21 @@ nav .navbar-collapse {
 }
 
 @media screen and (max-width: 992px) {
-    nav .icons{
+    nav .icons {
         display: none;
     }
 }
+
 @media screen and (min-width: 992px) {
     nav .navbar-collapse {
         border: none;
     }
 }
+
 /* End of nav */
 /* Start of home */
 .home {
-    background-image:  linear-gradient(rgba(13, 9, 4, 0.6),rgba(13, 9, 4, 0.6))
-    ,url(../images/bg-image-29.jpg);
+    background-image: linear-gradient(rgba(13, 9, 4, 0.6), rgba(13, 9, 4, 0.6)), url(../images/bg-image-29.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -98,13 +106,13 @@ nav .navbar-collapse {
     height: 100vh;
     color: white;
 }
-.homeTwo{
-    background-image: linear-gradient(rgba(13, 9, 4, 0.6),rgba(13, 9, 4, 0.6))
-    ,url(../images/bg-image-28.jpg);
+
+.homeTwo {
+    background-image: linear-gradient(rgba(13, 9, 4, 0.6), rgba(13, 9, 4, 0.6)), url(../images/bg-image-28.jpg);
 }
 
 .home-content h1 {
-    font-size: 100px; 
+    font-size: 100px;
     font-weight: 700;
     letter-spacing: -3;
     margin-bottom: 10px;
@@ -126,32 +134,38 @@ nav .navbar-collapse {
     background-color: var(--main-color);
     color: white;
 }
-.home-content button:nth-child(2){
+
+.home-content button:nth-child(2) {
     background-color: transparent;
     border: 1px solid transparent;
     border-color: white;
     margin-left: 5px;
 }
-.home-content button:nth-child(1){
+
+.home-content button:nth-child(1) {
     margin-right: 5px;
 }
-.home-content button:nth-child(2):hover{
+
+.home-content button:nth-child(2):hover {
     background-color: white;
     color: black;
 }
 
-.home-content button:nth-child(1):hover{
+.home-content button:nth-child(1):hover {
     background-color: #00D5EE;
     transform: translatey(-2%);
 }
+
 @media screen and (max-width: 556px) {
     .home-content h1 {
         font-size: 62px;
     }
 }
+
 .home-content p {
     font-size: 18px;
 }
+
 @media screen and (max-width: 556px) {
     .home-content p {
         font-size: 16px;
@@ -165,7 +179,8 @@ nav .navbar-collapse {
     left: 0;
     width: 50px;
 }
-.arrows .arr{
+
+.arrows .arr {
     cursor: pointer;
     position: relative;
     width: 50px;
@@ -181,6 +196,7 @@ nav .navbar-collapse {
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
+
 .carousel-indicators .cur {
     width: 30px;
     height: 30px;
@@ -192,5 +208,114 @@ nav .navbar-collapse {
         display: none;
     }
 }
+
 /* End Carousel*/
 /* End of home */
+/* Start abt */
+/* about-annimation */
+
+.about {
+    padding: 110px 0;
+}
+
+.about .container .content h6 {
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    color: #1f1f1f;
+    font-weight: 500;
+}
+.about .container .content p {
+    font-weight: 300;
+    font-size: 24px;
+    margin: 20px 0;
+    color: #787878;
+}
+
+.about .container .content button {
+    padding: 0 30px;
+    height: 50px;
+    transition: all .3s ease;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    color: #1f1f1f;
+    border-color: #dedede;
+    background-color: transparent;
+    margin-top: 28px;
+}
+.about .container .content button:hover{
+    background-color: black;
+    color: #fff;
+}
+
+
+
+/* animation */
+.animated-text span {
+    font-size: 26px;
+    text-transform: capitalize;
+    font-weight: 300;
+    overflow: hidden;
+    color: var(--main-color);
+    position: relative;
+    display: inline-flex;
+}
+
+.animated-text span::after {
+    content: "websites";
+    display: inline-block;
+    animation: typing 9s steps(10) infinite;
+    width: 0ch;
+    height: auto;
+    color: var(--main-color);
+    right: 0;
+    top: 0;
+}
+
+.animated-text span::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: var(--main-color);
+    position: absolute;
+    right: 0;
+    animation: blinking .6s linear alternate infinite;
+}
+
+@keyframes typing {
+    25% {
+        content: "websites";
+        width: 8ch;
+    }
+
+    40% {
+        width: 0ch;
+    }
+
+    60% {
+        content: "softwares";
+        width: 8ch;
+    }
+    70% {
+        width: 0ch;
+    }
+
+    85% {
+        content: "apps";
+        width: 4ch;
+    }
+
+    90% {
+        width: 0ch;
+    }
+
+}
+
+@keyframes blinking {
+    100% {
+        opacity: 0;
+    }
+}
+/* End animation */
+/* End abt */
