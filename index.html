@@ -1,6 +1,8 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Animation link -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -55,27 +57,70 @@
                         </li>
                     </ul>
                 </ul>
-                
+
             </div>
         </div>
     </nav>
     <!-- End of  nav -->
     <!-- Start of home -->
-    <section id="home" class="d-flex align-items-center justify-content-center">
-        <div class="home-content d-flex flex-column align-items-center">
-            <h1>
-                Get Awesome.
-            </h1>
-            <p>
-                We are an innovative company making digital stuff.
-            </p>
-            <div class="buts">
-                <button class="colored">read more</button>
-                <button>contact</button>
+    <section id="home" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#home" data-bs-slide-to="0" class="cur active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" class="cur" data-bs-target="#home" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <section id="homeOne" class="home d-flex align-items-center justify-content-center">
+                    <div class="container">
+                        <div class="home-content d-flex flex-column align-items-center text-center" data-aos="zoom-in">
+                            <h1>
+                                Create with bezel.
+                            </h1>
+                            <p>
+                                We help ambitious copminies create new value.
+                            </p>
+                            <div class="buts">
+                                <button class="btn colored">hire us</button>
+                                <button class="btn">services</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
+            <div class="carousel-item">
+                <section id="homeTwo" class="home homeTwo d-flex align-items-center justify-content-center">
+                    <div class="container">
+                        <div class="home-content d-flex flex-column align-items-center text-center" data-aos="zoom-in">
+                            <h1>
+                                Get Awesome.
+                            </h1>
+                            <p>
+                                We are an innovative company making digital stuff.
+                            </p>
+                            <div class="buts">
+                                <button class="btn colored">read more</button>
+                                <button class="btn">Contact</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="arrows">
+            <div class="left-arr arr carousel-control-prev" data-bs-target="#home" data-bs-slide="prev"><i
+                    class="fa-solid fa-arrow-left-long"></i></div>
+            <div class="right-arr arr carousel-control-next" data-bs-target="#home" data-bs-slide="next"><i
+                    class="fa-solid fa-arrow-right-long"></i></div>
         </div>
     </section>
     <!-- End of home -->
+
+    <!-- Animation script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
